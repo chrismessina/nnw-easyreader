@@ -1,0 +1,30 @@
+<div class="hfeed newsItemContainer">
+  <div class="hentry">
+    <div class="header">
+	    <h1 class="newsItemTitle entry-title"><strong>[[newsitem_title]]</strong></h1>
+    	<div class="newsItemDateLine entry-meta">
+    	  [[newsitem_dateline]]
+    	</div>
+      <a href="javascript:if%20(!document.getElementById('WCjq'))%20{var%20q=document.createElement('script');q.setAttribute('id',%20'WCjq');q.setAttribute('src',%20'http://westciv.com/xray/jquery-latest.pack.js');document.getElementsByTagName('body')[0].appendChild(q);}%20var%20s=document.createElement('script');s.setAttribute('id','WCXray');%20s.setAttribute('src',%20'http://westciv.com/xray/xray.js');document.getElementsByTagName('head')[0].appendChild(s);void(s);" title="XRAY" id="xray"></a>
+    </div>
+    <div class="newsItemDescription entry-content">
+      [[newsitem_description]]
+    </div>
+    <div id="extra">
+      [[newsitem_extralinks]]
+    </div>
+</div>
+<script type="text/javascript">
+	var styletext = document.getElementsByTagName("style").item(1).firstChild.nodeValue;
+	var stylepath = styletext.replace(/@import "|stylesheet.css";/g,"");
+	function loadJavaScript(files){
+		for (var i=0;i<files.length;i++){
+			var script = document.createElement( 'script' );
+			script.type = 'text/javascript';
+			script.charset = 'utf-8';
+			script.src = stylepath + files[i];
+			document.getElementsByTagName('head')[0].appendChild( script );
+		}
+	}
+loadJavaScript(["jquery.js","jquery.imagefit.js","javascript.js"]);
+</script>
